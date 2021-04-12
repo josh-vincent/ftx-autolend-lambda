@@ -1,6 +1,6 @@
-# Lambda stripe assign to custom attribute confirm signup trigger
+# Lambda autolend USD hourly
 
-Lambda function after user confirms account adds user to stripe and then updated custom cognito field.
+Lambda function to get current available USD balance and lend it hourly.
 
 ### Dependancies
 
@@ -15,10 +15,9 @@ Create you api in FTX and copy the values
 
 ```
 {
-  FTX_API_SECRET: 'API SECRET HERE ',
+  FTX_API_SECRET: 'API SECRET HERE',
   FTX_API_KEY: 'API VALUE HERE'
 }
-
 ```
 
 Make sure to update your lambda policy to include
@@ -46,10 +45,8 @@ Make sure to update your lambda policy to include
 ```
 
 ## Setup Trigger
-Add Trigger
 
-EventBridge(CloudWatch Events)
-
-Create a new rule
-
-Schedule expression cron(50 * * * ? *)
+* Add Trigger
+* EventBridge(CloudWatch Events)
+* Create a new rule
+* Schedule expression cron(50 * * * ? *)
