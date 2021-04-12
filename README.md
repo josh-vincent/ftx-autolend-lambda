@@ -11,7 +11,15 @@ npm i ftx-rest-api
 ### Prerequisites
 
 Create new secrets manager
-Create you api in FTX and copy the values into FTX_API_SECRET: 'API SECRET HERE ' & FTX_API_KEY: 'API VALUE HERE'
+Create you api in FTX and copy the values
+
+```
+{
+  FTX_API_SECRET: 'API SECRET HERE ',
+  FTX_API_KEY: 'API VALUE HERE'
+}
+
+```
 
 Make sure to update your lambda policy to include
 
