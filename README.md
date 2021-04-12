@@ -39,6 +39,9 @@ Make sure to update your lambda policy to include
 
 ## Setup Trigger
 Add Trigger
+
 EventBridge(CloudWatch Events)
+
 Create a new rule
+
 Schedule expression cron(50 * * * ? *)
