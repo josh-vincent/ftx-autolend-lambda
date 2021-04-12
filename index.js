@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk')
 const FTXRest = require('ftx-api-rest')
-//cron(50 * * * ? *) run every hour on at 50mins
+//cron(50 * * * ? *) run every hour on at 50minscd
 exports.handler = async (event, callback) =>
 {
   const secrets = await getSecret('FTX-ID-FROM-SECRETS-MANAGER')
@@ -54,6 +54,5 @@ async function lendAll(ftx, currencyObject)
       rate: 0.000001,
     },
   })
-
   return offersResult
 }
