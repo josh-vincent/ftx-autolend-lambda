@@ -30,7 +30,7 @@ Make sure to update your lambda policy to include
   ],
   "Resource": {
     "Fn::Sub": [
-      "arn:aws:secretsmanager:${region}:${account}:secret:FTX_MAIN-0RPnWV",
+      "arn:aws:secretsmanager:${region}:${account}:secret:FTX-ID-FROM-SECRETS-MANAGER_1234",
       {
         "region": {
           "Ref": "AWS::Region"

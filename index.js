@@ -3,7 +3,7 @@ const FTXRest = require('ftx-api-rest')
 //cron(50 * * * ? *) run every hour on at 50mins
 exports.handler = async (event, callback) =>
 {
-  const secrets = await getSecret('FTX-ID-SECRETS-MANAGER')
+  const secrets = await getSecret('FTX-ID-FROM-SECRETS-MANAGER')
   const { FTX_API_SECRET, FTX_API_KEY } = secrets
   const ftx = new FTXRest({ key: FTX_API_KEY, secret: FTX_API_SECRET, subaccount: subAccount })
 
