@@ -100,11 +100,15 @@ async function lendAll(ftx, currencyObject)
   
   let currency = 'USD';
   let subAccount = '';
+  
   const ftx = new FTXRest({ key: FTX_API_KEY, secret: FTX_API_SECRET, subaccount: subAccount });
-
+  
   const current = await getCurrentBalances(ftx).catch(err => console.log(err));
+  
   const currrencyObject = current.result.find(result => result.coin === currency);
+  
   const lending = await lendAll(ftx, currrencyObject).catch(err => console.log(err));
+  
 ```
 
 ## Setup Trigger
